@@ -119,22 +119,29 @@ configurations {
 }
 
 dependencies {
+  // Dynamic Trees:
   implementation "curse.maven:${dynamic_trees_project}:${dynamic_trees_file}"
+  // Farmer's Delight:
+  implementation "curse.maven:${farmers_delight_project}:${farmers_delight_file}"
+  // Extra Delight:
+  implementation "curse.maven:${extra_delight_project}:${extra_delight_file}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
 // A missing property will result in an error. Properties are expanded using ${} Groovy notation.
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [
-            minecraft_version           : minecraft_version,
-            minecraft_version_range     : minecraft_version_range,
-            neo_version                 : neo_version,
-            loader_version_range        : loader_version_range,
-            mod_id                      : mod_id,
-            mod_name                    : mod_name,
-            mod_license                 : mod_license,
-            mod_version                 : mod_version,
-            dynamic_trees_version_range : dynamic_trees_version_range
+            minecraft_version             : minecraft_version,
+            minecraft_version_range       : minecraft_version_range,
+            neo_version                   : neo_version,
+            loader_version_range          : loader_version_range,
+            mod_id                        : mod_id,
+            mod_name                      : mod_name,
+            mod_license                   : mod_license,
+            mod_version                   : mod_version,
+            dynamic_trees_version_range   : dynamic_trees_version_range,
+            farmers_delight_version_range : farmers_delight_version_range,
+            extra_delight_version_range   : extra_delight_version_range
     ]
     inputs.properties replaceProperties
     expand replaceProperties
