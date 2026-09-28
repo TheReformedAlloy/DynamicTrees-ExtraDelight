@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "type": "dynamictrees:thick_branch_rings",
+      "resource": "extradelight:block/fruit_log_top"
+    },
+    {
+      "type": "dynamictrees:thick_branch_rings",
+      "resource": "extradelight:block/stripped_fruit_log_top"
+    },
+    {
+      "type": "dynamictrees:thick_branch_rings",
+      "resource": "extradelight:block/cinnamon_log_top"
+    },
+    {
+      "type": "dynamictrees:thick_branch_rings",
+      "resource": "extradelight:block/stripped_cinnamon_log_top"
+    }
+  ]
+}

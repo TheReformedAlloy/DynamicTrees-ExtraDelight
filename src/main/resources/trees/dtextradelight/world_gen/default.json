@@ -1,0 +1,93 @@
+[
+  {
+    "_comment": "There a small chance that a fruit or hazel tree will spawn in a forest, usually apples.",
+    "select": { "tag": "#minecraft:is_forest" },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtextradelight:apple": 5,
+          "dtextradelight:hazelnut": 1,
+          "dtextradelight:grapefruit": 1,
+          "dtextradelight:lemon": 1,
+          "dtextradelight:lime": 1,
+          "dtextradelight:orange": 1,
+          "...": 290
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "_comment": "Fruit or nut trees can spawn rarely in meadows",
+      "select": {
+        "name": "minecraft:meadow"
+      },
+      "apply": {
+        "species": {
+          "method": "splice_before",
+          "random": {
+            "dtextradelight:apple": 5,
+            "dtextradelight:hazelnut": 1,
+            "dtextradelight:grapefruit": 1,
+            "dtextradelight:lemon": 1,
+            "dtextradelight:lime": 1,
+            "dtextradelight:orange": 1,
+            "...": 290
+          }
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "name": "minecraft:.*",
+      "tag": "#minecraft:is_jungle"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtextradelight:cinnamon": 1,
+          "...": 30
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "name": "minecraft:sparse_jungle"
+    },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "dtextradelight:cinnamon": 1,
+          "...": 40
+        }
+      }
+    }
+  },
+  {
+    "select": {
+      "_comment": "Cinnamon trees can rarely spawn in tropical biomes",
+      "select": {
+        "name": "minecraft:meadow"
+      },
+      "apply": {
+        "species": {
+          "method": "splice_before",
+          "random": {
+            "dtextradelight:apple": 5,
+            "dtextradelight:hazelnut": 1,
+            "dtextradelight:grapefruit": 1,
+            "dtextradelight:lemon": 1,
+            "dtextradelight:lime": 1,
+            "dtextradelight:orange": 1,
+            "...": 290
+          }
+        }
+      }
+    }
+  }
+]

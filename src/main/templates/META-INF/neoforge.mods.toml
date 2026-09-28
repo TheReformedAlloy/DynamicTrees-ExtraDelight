@@ -66,5 +66,5 @@ Compatibility mod to add DynamicTrees-style trees for all ExtraDelight trees.
     type="required"
     versionRange="${extra_delight_version_range}"
     ordering="AFTER"
-    side="CLIENT"
+    side="BOTH"
 

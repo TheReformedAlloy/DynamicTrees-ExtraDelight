@@ -1,0 +1,11 @@
+{
+  "common_leaves": "dtextradelight:cinnamon",
+  "common_species": "dtextradelight:cinnamon",
+  "primitive_log": "extradelight:cinnamon_log",
+  "primitive_stripped_log": "extradelight:stripped_cinnamon_log",
+  "max_branch_radius": 3,
+  "generate_surface_root": true,
+  "texture_overrides": {
+    "branch_top": "extradelight:block/cinnamon_log_top"
+  }
+}

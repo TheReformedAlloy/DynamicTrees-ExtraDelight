@@ -1,0 +1,26 @@
+{
+  "family": "dtextradelight:fruit",
+  "tapering": 0.4,
+  "up_probability": 1,
+  "signal_energy": 10.0,
+  "growth_rate": 0.7,
+  "lowest_branch_height": 4,
+  "leaves_properties": "dtextradelight:fruit",
+  "generate_seed": true,
+  "generate_sapling": true,
+  "preferred_climate": "temperate",
+  "climate_tolerance": 0.4,
+  "acceptable_soils": ["dirt_like"],
+  "primitive_saplings": [
+    { "sapling_block": "extradelight:apple_sapling" },
+    {
+      "sapling_item": "apple",
+      "can_craft_seed_to_sapling": false
+    }
+  ],
+  "fruits": ["apple"],
+  "features": [{ "name": "fruit", "properties": { "fruit": "apple" } }],
+  "lang_overrides": {
+    "seed": "Apple Pip"
+  }
+}

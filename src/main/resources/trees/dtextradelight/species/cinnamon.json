@@ -1,0 +1,21 @@
+{
+  "family": "dtextradelight:cinnamon",
+  "tapering": 0.1,
+  "up_probability": 3,
+  "signal_energy": 10.0,
+  "growth_rate": 1.0,
+  "lowest_branch_height": 4,
+  "leaves_properties": "dtextradelight:cinnamon",
+  "generate_seed": true,
+  "generate_sapling": true,
+  "preferred_climate": "tropical",
+  "climate_tolerance": 0.3,
+  "acceptable_soils": ["dirt_like"],
+  "primitive_saplings": [
+    { "sapling_block": "extradelight:cinnamon_sapling" },
+    {
+      "sapling_item": "extradelight:cinnamon_stick",
+      "can_craft_seed_to_sapling": false
+    }
+  ]
+}

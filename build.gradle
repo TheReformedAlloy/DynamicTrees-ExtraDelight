@@ -26,10 +26,53 @@ sourceSets.main.resources {
 }
 
 repositories {
+  maven {
+      name = 'CurseMaven'
+      url = 'https://cursemaven.com'
+  }
+ 
+  // Extra Delight Dev Dependency Repositories:
+  maven {
+    // Maven for PatchouliProvider
+    name = "BlameJared's maven"
+    url = 'https://maven.blamejared.com'
+  }
+  maven { 
+    // Maven for JEI
+    name = "DVS1"
+    url = "https://dvs1.progwml6.com/files/maven/"
+  }
+  maven { 
+    // Maven for Create, Ponder, and Flywheel
+    name = "Create Maven"
+    url = "https://maven.createmod.net"
+  } 
+    // Create sub-dependencies:
     maven {
-        name = 'CurseMaven'
-        url = 'https://cursemaven.com'
+      // Maven for Architectury
+      name = "Architectury"
+      url = "https://maven.architectury.dev"
     }
+    maven {
+      // Maven for FTB Chunks, Library, etc.
+      name = "ftbMaven"
+      url = "https://maven.ftb.dev/releases"
+    }
+    maven {
+      // Maven for Journeymap, a dependency of Create
+      name = "Modrinth"
+      url = "https://api.modrinth.com/maven"
+    }
+    maven { 
+      // Maven for Curios API
+      name = "The Illusive C4"
+      url = "https://maven.theillusivec4.top/"
+      }
+  maven { 
+    // Maven for Registrate
+    name = "DevOS.One"
+    url = "https://mvn.devos.one/snapshots"
+  }
 }
 
 base {
@@ -120,11 +163,29 @@ configurations {
 
 dependencies {
   // Dynamic Trees:
-  implementation "curse.maven:${dynamic_trees_project}:${dynamic_trees_file}"
+    implementation("curse.maven:${dynamic_trees_project}:${dynamic_trees_file}")
   // Farmer's Delight:
-  implementation "curse.maven:${farmers_delight_project}:${farmers_delight_file}"
-  // Extra Delight:
-  implementation "curse.maven:${extra_delight_project}:${extra_delight_file}"
+    implementation("curse.maven:${farmers_delight_project}:${farmers_delight_file}")
+    // Extra Delight:
+    implementation("curse.maven:${extra_delight_project}:${extra_delight_file}")
+
+  //DynmaicTrees Tools/Utilities
+    runtimeOnly "curse.maven:jade-324717:6291517"
+    runtimeOnly "curse.maven:jei-238222:5846880"
+    runtimeOnly "curse.maven:cc-tweaked-282001:5714512"
+    runtimeOnly "curse.maven:suggestion-provider-fix-469647:5598604"
+    runtimeOnly "curse.maven:tagtooltips-899941:6418051"
+
+  // Extra Delight Dev Dependencies:
+    runtimeOnly("curse.maven:${dynamic_trees_project}:${dynamic_trees_file}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    runtimeOnly("com.simibubi.create:create-${minecraft_version}:${create_version}")
+	  runtimeOnly("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    runtimeOnly("com.tterrag.registrate:Registrate:${registrate_version}")
+	  runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE:api")
+    runtimeOnly("xyz.brassgoggledcoders:PatchouliProvider:${patchouli_provider_version}")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
