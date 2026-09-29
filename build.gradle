@@ -123,7 +123,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), "--existing-mod", "dynamictrees", "--existing-mod", "extradelight"
         }
 
         // applies to all the run configs above
@@ -170,16 +170,19 @@ dependencies {
     implementation("curse.maven:${extra_delight_project}:${extra_delight_file}")
 
   //DynmaicTrees Tools/Utilities
-    runtimeOnly "curse.maven:jade-324717:6291517"
-    runtimeOnly "curse.maven:jei-238222:5846880"
-    runtimeOnly "curse.maven:cc-tweaked-282001:5714512"
-    runtimeOnly "curse.maven:suggestion-provider-fix-469647:5598604"
-    runtimeOnly "curse.maven:tagtooltips-899941:6418051"
+    runtimeOnly "curse.maven:jade-${jade_project}:${jade_file}"
+    runtimeOnly "curse.maven:jei-${jei_project}:${jei_file}"
+    runtimeOnly "curse.maven:cc-tweaked-${cc_tweaked_project}:${cc_tweaked_file}"
+    runtimeOnly "curse.maven:suggestion-provider-fix-${suggestion_provider_fix_project}:${suggestion_provider_fix_file}"
+    runtimeOnly "curse.maven:tagtooltips-${tagtooltips_project}:${tagtooltips_file}"
+
+    implementation "curse.maven:glitchcore-${glitchcore_project}:${glitchcore_file}"
+    implementation "curse.maven:serene-seasons-${serene_seasons_project}:${serene_seasons_file}"
 
   // Extra Delight Dev Dependencies:
     runtimeOnly("curse.maven:${dynamic_trees_project}:${dynamic_trees_file}")
-    runtimeOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
-    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    // runtimeOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    // runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
     runtimeOnly("com.simibubi.create:create-${minecraft_version}:${create_version}")
 	  runtimeOnly("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
