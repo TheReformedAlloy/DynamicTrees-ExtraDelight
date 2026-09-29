@@ -1,0 +1,18 @@
+{
+  "block.dtextradelight.cinnamon_branch": "Cinnamon Tree",
+  "block.dtextradelight.fruit_branch": "Fruit Tree",
+  "item.dtextradelight.apple_seed": "Apple Pip",
+  "item.dtextradelight.cinnamon_seed": "Cinnamon Seed",
+  "item.dtextradelight.grapefruit_seed": "Grapefruit Seed",
+  "item.dtextradelight.hazelnut_seed": "Hazelnut Seed",
+  "item.dtextradelight.lemon_seed": "Lemon Seed",
+  "item.dtextradelight.lime_seed": "Lime Seed",
+  "item.dtextradelight.orange_seed": "Orange Seed",
+  "species.dtextradelight.apple": "Apple",
+  "species.dtextradelight.cinnamon": "Cinnamon",
+  "species.dtextradelight.grapefruit": "Grapefruit",
+  "species.dtextradelight.hazelnut": "Hazelnut",
+  "species.dtextradelight.lemon": "Lemon",
+  "species.dtextradelight.lime": "Lime",
+  "species.dtextradelight.orange": "Orange"
+}

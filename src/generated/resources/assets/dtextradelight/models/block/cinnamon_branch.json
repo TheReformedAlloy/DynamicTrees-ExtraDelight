@@ -1,0 +1,7 @@
+{
+  "loader": "dynamictrees:branch",
+  "textures": {
+    "bark": "extradelight:block/cinnamon_log",
+    "rings": "extradelight:block/cinnamon_log_top"
+  }
+}
