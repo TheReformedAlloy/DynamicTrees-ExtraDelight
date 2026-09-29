@@ -1,6 +1,11 @@
 {
   "values": [
-    "dtextradelight:stripped_fruit_branch",
-    "dtextradelight:stripped_cinnamon_branch"
+    "dtextradelight:stripped_apple_branch",
+    "dtextradelight:stripped_hazel_branch",
+    "dtextradelight:stripped_grapefruit_branch",
+    "dtextradelight:stripped_cinnamon_branch",
+    "dtextradelight:stripped_lemon_branch",
+    "dtextradelight:stripped_lime_branch",
+    "dtextradelight:stripped_orange_branch"
   ]
 }

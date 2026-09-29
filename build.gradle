@@ -130,7 +130,14 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), "--existing-mod", "dynamictrees", "--existing-mod", "extradelight"
+            programArguments.addAll(
+              '--mod', project.mod_id,
+              '--all',
+              '--output', file('src/generated/resources/').getAbsolutePath(),
+              '--existing', file('src/main/resources/').getAbsolutePath(),
+              "--existing-mod", "extradelight",
+              "--existing-mod", "dynamictrees"
+            )
         }
 
         // applies to all the run configs above
@@ -174,7 +181,7 @@ dependencies {
   // Farmer's Delight:
     implementation("curse.maven:${farmers_delight_project}:${farmers_delight_file}")
   // Extra Delight:
-  implementation("curse.maven:${extra_delight_project}:${extra_delight_file}")
+    implementation("curse.maven:${extra_delight_project}:${extra_delight_file}")
 
   //DynmaicTrees Tools/Utilities
     runtimeOnly "curse.maven:jade-${jade_project}:${jade_file}"

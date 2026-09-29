@@ -1,6 +1,11 @@
 {
   "values": [
-    "dtextradelight:fruit_leaves",
-    "dtextradelight:cinnamon_leaves"
+    "dtextradelight:apple_leaves",
+    "dtextradelight:hazel_leaves",
+    "dtextradelight:grapefruit_leaves",
+    "dtextradelight:cinnamon_leaves",
+    "dtextradelight:lemon_leaves",
+    "dtextradelight:lime_leaves",
+    "dtextradelight:orange_leaves"
   ]
 }
