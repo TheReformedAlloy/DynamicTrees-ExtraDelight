@@ -166,8 +166,8 @@ dependencies {
     implementation("curse.maven:${dynamic_trees_project}:${dynamic_trees_file}")
   // Farmer's Delight:
     implementation("curse.maven:${farmers_delight_project}:${farmers_delight_file}")
-    // Extra Delight:
-    implementation("curse.maven:${extra_delight_project}:${extra_delight_file}")
+  // Extra Delight:
+  implementation("curse.maven:${extra_delight_project}:${extra_delight_file}")
 
   //DynmaicTrees Tools/Utilities
     runtimeOnly "curse.maven:jade-${jade_project}:${jade_file}"

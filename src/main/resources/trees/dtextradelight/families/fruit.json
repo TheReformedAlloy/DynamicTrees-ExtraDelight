@@ -1,7 +1,7 @@
 {
   "common_leaves": "dtextradelight:fruit",
   "common_species": "dtextradelight:apple",
-  "primitive_log": "extradelight:fruit_log",
+  "primitive_log": "extradelight:block/fruit_log",
   "primitive_stripped_log": "extradelight:stripped_fruit_log",
   "max_branch_radius": 5,
   "generate_surface_root": true,
