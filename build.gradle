@@ -30,6 +30,10 @@ repositories {
       name = 'CurseMaven'
       url = 'https://cursemaven.com'
   }
+  maven {
+    name = "Modrinth"
+    url = "https://api.modrinth.com/maven"
+  }
  
   // Extra Delight Dev Dependency Repositories:
   maven {
@@ -58,16 +62,19 @@ repositories {
       name = "ftbMaven"
       url = "https://maven.ftb.dev/releases"
     }
-    maven {
-      // Maven for Journeymap, a dependency of Create
-      name = "Modrinth"
-      url = "https://api.modrinth.com/maven"
-    }
     maven { 
       // Maven for Curios API
       name = "The Illusive C4"
       url = "https://maven.theillusivec4.top/"
       }
+    maven {
+      // Maven for JourneyMap
+      url = "https://jm.gserv.me/repository/maven-public"
+      content {
+          includeGroup "info.journeymap"
+          includeGroup "mysticdrew"
+      }
+    }
   maven { 
     // Maven for Registrate
     name = "DevOS.One"
@@ -172,7 +179,7 @@ dependencies {
   //DynmaicTrees Tools/Utilities
     runtimeOnly "curse.maven:jade-${jade_project}:${jade_file}"
     runtimeOnly "curse.maven:jei-${jei_project}:${jei_file}"
-    runtimeOnly "curse.maven:cc-tweaked-${cc_tweaked_project}:${cc_tweaked_file}"
+    runtimeOnly "maven.modrinth:cc-tweaked:${cc_tweaked_version}-neoforge,${minecraft_version}"
     runtimeOnly "curse.maven:suggestion-provider-fix-${suggestion_provider_fix_project}:${suggestion_provider_fix_file}"
     runtimeOnly "curse.maven:tagtooltips-${tagtooltips_project}:${tagtooltips_file}"
 
@@ -181,11 +188,13 @@ dependencies {
 
   // Extra Delight Dev Dependencies:
     runtimeOnly("curse.maven:${dynamic_trees_project}:${dynamic_trees_file}")
-    // runtimeOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
-    // runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
     runtimeOnly("com.simibubi.create:create-${minecraft_version}:${create_version}")
 	  runtimeOnly("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    runtimeOnly("maven.modrinth:journeymap:${minecraft_version}-${journeymap_version}+neoforge")
+    runtimeOnly("info.journeymap:journeymap-api-neoforge:${journeymap_api_version}-${minecraft_version}-${journeymap_specifier}") {
+        exclude(group: "curse.maven") // Pulls in a old version of journey map which is for forge
+    }
     runtimeOnly("com.tterrag.registrate:Registrate:${registrate_version}")
 	  runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}-NEOFORGE:api")
     runtimeOnly("xyz.brassgoggledcoders:PatchouliProvider:${patchouli_provider_version}")
