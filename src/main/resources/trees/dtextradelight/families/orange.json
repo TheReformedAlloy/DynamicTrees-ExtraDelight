@@ -1,11 +1,13 @@
 {
   "common_leaves": "dtextradelight:orange",
-  "common_species": "dtextradelight:apple",
-  "primitive_log": "extradelight:block/fruit_log",
+  "common_species": "dtextradelight:orange",
+  "primitive_log": "extradelight:fruit_log",
   "primitive_stripped_log": "extradelight:stripped_fruit_log",
   "max_branch_radius": 5,
   "generate_surface_root": true,
   "texture_overrides": {
-    "branch_top": "extradelight:block/fruit_log_top"
+    "branch_top": "extradelight:block/fruit_log_top",
+    "roots_side": "extradelight:block/fruit_log",
+    "roots_top": "extradelight:block/fruit_log_top"
   }
 }

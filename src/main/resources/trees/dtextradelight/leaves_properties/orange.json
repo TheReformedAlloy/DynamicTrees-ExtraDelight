@@ -1,3 +1,9 @@
 {
-  "primitive_leaves": "extradelight:orange_leaves"
+  "primitive_leaves": "extradelight:orange_leaves",
+  "model_overrides": {
+    "leaves": "extradelight:block/crops/fruit/orange/orange_leaves_stage0"
+  },
+  "texture_overrides": {
+    "leaves": "extradelight:block/crops/fruit/orange/orange_leaves"
+  }
 }

@@ -1,0 +1,7 @@
+{
+  "loader": "dynamictrees:branch",
+  "textures": {
+    "bark": "extradelight:block/stripped_fruit_log",
+    "rings": "extradelight:block/stripped_fruit_log_top"
+  }
+}

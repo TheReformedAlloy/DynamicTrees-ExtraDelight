@@ -1,3 +1,9 @@
 {
-  "primitive_leaves": "extradelight:hazelnut_leaves"
+  "primitive_leaves": "extradelight:hazelnut_leaves",
+  "model_overrides": {
+    "leaves": "extradelight:block/crops/fruit/hazelnut/hazelnut_leaves_stage0"
+  },
+  "texture_overrides": {
+    "leaves": "extradelight:block/crops/fruit/hazelnut/hazelnut_leaves"
+  }
 }
